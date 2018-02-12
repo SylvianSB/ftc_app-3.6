@@ -64,6 +64,7 @@ public class ISMDriveBase extends LinearOpMode {
             {
                 pullMotor.setPower(.60);
                 pullMotor2.setPower(.30);
+                //Some things i need to change
             }
 
             if (gamepad1.dpad_down)
