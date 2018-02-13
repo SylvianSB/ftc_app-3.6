@@ -28,9 +28,9 @@ public class ISMDriveBase extends LinearOpMode {
         liftright = hardwareMap.servo.get("lift_right");
         liftleft = hardwareMap.servo.get("lift_left");
         leftMotor.setDirection(DcMotorSimple.Direction.REVERSE);
-        pullMotor2.setDirection(DcMotorSimple.Direction.REVERSE);
+        pullMotor.setDirection(DcMotorSimple.Direction.REVERSE);
         liftright.setPosition(.40);
-        liftleft.setPosition (.30);
+        liftleft.setPosition (.60);
         liftleft.setDirection(Servo.Direction.REVERSE);
 
 
@@ -49,28 +49,28 @@ public class ISMDriveBase extends LinearOpMode {
 
             if (gamepad1.a)
             {
-                liftleft.setPosition(-.75);
-                liftright.setPosition(-.55);
+                liftleft.setPosition(.60);
+                liftright.setPosition(.40);
 
             }
 
             if (gamepad1.x)
             {
-                liftleft.setPosition(.75);
-                liftright.setPosition(.50);
+                liftleft.setPosition(1);
+                liftright.setPosition(.80);
             }
 
             if (gamepad1.dpad_up)
             {
-                pullMotor.setPower(.60);
-                pullMotor2.setPower(.30);
+                pullMotor.setPower(.35);
+                pullMotor2.setPower(.35);
                 //Some things i need to change
             }
 
             if (gamepad1.dpad_down)
             {
                 pullMotor.setPower(-.15);
-                pullMotor2.setPower(-.10);
+                pullMotor2.setPower(-.15);
             }
 
             if (gamepad1.b)
